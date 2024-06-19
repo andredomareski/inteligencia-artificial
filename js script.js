@@ -6,7 +6,7 @@ const textoResultados = document.querySelector('.texto-resultados');
 const lista = [item1, item2]
 const perguntas = [
     {
-        enunciado: "Pergunta 1",
+        enunciado: "Assim que saiu da escola Gabriel se depara com uma nova tecnologia, um chat que consegue responder todas as dúvidas que uma pessoa pode ter, o chat também gera imagens e áudios hiper-realistas. Qual o primeiro pensamento de Gabriel?",
         alternativas: ["Alternativa 1", "Alternativa 2"],
     },
     {
