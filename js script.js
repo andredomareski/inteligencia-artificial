@@ -10,47 +10,57 @@ const perguntas = [
         alternativas: [
         {
             texto:"Isso é assustador!",
-            afimarção: "Afirmação 1"
+            afirmação: "Afirmação 1" 
         },
-        { 
+        {
             texto:"Isso é maravilhoso!",
-            afimarção: "Afirmação 2"
-        } 
+            afirmação: "Afirmação 2"
+        }
         ],
     },
     {
         enunciado: "Com a descoberta desta tecnologia uma professora de tecnologia da escola decidiu fazer uma sequência de aulas sobre IA. No fim de uma aula ela pede que Gabriel escreva um trabalho sobre o uso de tecnologia em sala de aula. Qual atitude Gabriel toma?",
         alternativas: [
-            {
+           {
             texto:"Utiliza uma ferramenta de busca na internet que utiliza IA para que ela ajude a encontrar informações relevantes para o trabalho e explique numa linguagem que facilite o entendimento.", 
-            afimarção: "Afirmação 1"
-            },
-    {     
-            texto:"Escreve o trabalho com base nas conversas que teve com colegas, algumas pesquisas na internet e conhecimentos próprios sobre o tema.",
-            afimarção: "Afirmação 2"
-        },
-        ]           
+            afirmação: "Afirmação 1"
+           },
+    {
+               texto:"Escreve o trabalho com base nas conversas que teve com colegas, algumas pesquisas na internet e conhecimentos próprios sobre o tema.",
+            afirmação: "Afirmação 2"
+        }
+    ]
+},
     {
         enunciado: "Depois que Gabriel escreveu o trabalho, teve uma discussão sobre o impacto da IA no trabalho do futuro o que Gabriel faz:",
         alternativa: [
             {
             texto: "Defende a ideia de que a IA pode criar novas oportunidades de emprego e melhorar habilidades humanas", 
-            afimarção: "Afirmação 1"
+            afirmação: "Afirmação 1"
             },
             {
-            texto: "Me preocupo com as pessoas que perderão seus empregos para máquinas e defendem a importância de proteger os trabalhadores.",
-            afimarção: "Afirmação 2"
+            texto:"Me preocupo com as pessoas que perderão seus empregos para máquinas e defendem a importância de proteger os trabalhadores.",
+            afirmação: "Afirmação 2"
+            }
         ],
     },
     {
         enunciado: "Ao final da discussão, Gabriel precisou criar uma imagem no computador que representasse o que pensa sobre IA. E agora?",
         alternativas:[
-            "Criar uma imagem utilizando um gerador de imagem de IA.", 
-            "Criar uma imagem utilizando uma plataforma de design como o Paint."],
+            {
+            texto: "Criar uma imagem utilizando um gerador de imagem de IA.", 
+            afirmação: "Afirmação 1"
+            }
+            {
+            texto: "Criar uma imagem utilizando uma plataforma de design como o Paint.",
+            afirmação:"Afirmação 2"    
+            }
+        ],
     },
 ];
 let atual = 0;
 let perguntaAtual;
+let historiaFinal = "";
 
 function mostraPergunta(){
     perguntaAtual = perguntas [atual];
@@ -60,7 +70,16 @@ function mostraPergunta(){
 function mostraAlternativas(){
     for (const alternativa of perguntaAtual.alternativas){
         const botaoAlternativas = document.createElement("button");
-        botaoAlternativas.textContent = alternativa;
+        botaoAlternativas.textContent = alternativa.texto;
+        botaoAlternativas.addEventListener("click", () =>
+            respostaSelecionada(alternativa)); 
+            function respostaSelecionada (opcaoSelecionada){
+                const afirmacoes = opcaoSelecionada.afirmação;
+                historiaFinal = afirmacoes;
+                atual++;
+                mostraPergunta();
+            }
+        );
         caixaAlternativas.appendChild(botaoAlternativas);
         }
 }
@@ -71,4 +90,4 @@ const lapis = {
   tipo: 'HB',
   cor: 'Grafite',
   temBorrachaAtras: false
-}.
+}
