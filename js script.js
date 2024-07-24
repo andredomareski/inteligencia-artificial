@@ -71,4 +71,4 @@ const lapis = {
   tipo: 'HB',
   cor: 'Grafite',
   temBorrachaAtras: false
-}
+}.
