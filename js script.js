@@ -1,4 +1,4 @@
-import { aleatorio } from "./aleatorio.js";
+import { aleatorio, nome } from "./aleatorio.js";
 import { aleatorio } from "./aleatorio.js";
 const caixaPrincipal = document.querySelector(".caixa-principal");
 const caixaPerguntas = document.querySelector(".caixa-perguntas");
@@ -115,12 +115,19 @@ function mostraResultado() {
 function aleatorio (lista){
     const posicao=Math.random()*lista.length
     return lista [posicao];
-
 }
+}
+export const nome = aleatorio(nomes);
 function JogarNovamente (){
     atual = 0;
     historiaFinal = "";
     caixaResultado.classList.remove("mostrar");
     mostraPergunta ();
 }
+function substituiNome(){
+    for ( pergunta of perguntas){
+        pergunta.enunciado = pergunta.enunciado.replace(/você/g, nome);
+    }
+}
+substituiNome();
 mostraPergunta();
