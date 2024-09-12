@@ -5,4 +5,4 @@ export function aleatorio (lista){
     return lista [posicao];
  }
 
- export const nome = aleatorio("André", "Joãozinho", "Juliano" )
+ export const nome = aleatorio(nomes)
