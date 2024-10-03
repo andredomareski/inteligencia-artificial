@@ -12,7 +12,7 @@ export const perguntas = [
             {
                 texto: "Juliano Preisnher",
                 afirmacao: [
-                    "Já o Juliano entende um pouco de"
+                    "Já o Juliano entende um pouco de esportes, mais não tem muita vontade."
                 ],
                 proxima: 2,
                 }
