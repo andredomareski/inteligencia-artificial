@@ -1,18 +1,18 @@
 export const perguntas = [
     {
-        enunciado: "Assim que saiu da escola você se depara com uma nova tecnologia, um chat que consegue responder todas as dúvidas que uma pessoa pode ter, ele também gera imagens e áudios hiper-realistas. Qual o primeiro pensamento?",
+        enunciado: "Algumas das opções seriam as seguintes:",
         alternativas: [
             {
-                texto: "Isso é assustador!",
+                texto: "João Thalvani",
                 afirmacao: [
-                    "No início ficou com medo do que essa tecnologia pode fazer. "
+                    "O Thalvani seria uma boa opção por ter mais experiência com esportes e tmbém por que tem uma maior vontade de investir na área."
                 ],
                 proxima: 1,
                 },
             {
-                texto: "Isso é maravilhoso!",
+                texto: "Juliano Preisnher",
                 afirmacao: [
-                    "Quis saber como usar IA no seu dia a dia."
+                    "Já o Juliano entende um pouco de"
                 ],
                 proxima: 2,
                 }
